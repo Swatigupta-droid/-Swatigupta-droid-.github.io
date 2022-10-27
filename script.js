@@ -75,6 +75,12 @@ $(function ()
         $("#location").text(FetchedDetails.location);
         $("#bio").text(FetchedDetails.bio);
         $("#twitter_username").text(FetchedDetails.twitter_username);
+        $("#followers").text(FetchedDetails.followers);
+        $("#following").text(FetchedDetails.following);
+        let date = new Date(FetchedDetails.created_at);
+        $("#created_at").text(date.toDateString());
+        date = new Date(FetchedDetails.updated_at);
+        $("#updated_at").text(date.toDateString());
         resetMessages();
         $(".Fetched").fadeIn();
         $("#fetch").prop("disabled",true);
